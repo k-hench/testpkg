@@ -225,3 +225,21 @@ After pushing the changes to GitHub and activating the right settings in the git
 
 Now you are done setting up your package --- it can be installed using (your updated version of) `remotes::install_github("k-hench/testpkg")`. 
 Further help on how to do more sophisticated stuff can be found at the online book [R Packages](https://r-pkgs.org/index.html).
+
+---
+
+### Session Info
+
+Here are the package versions I used `r emo::ji("smile")`:
+
+```{r, include = FALSE}
+library(usethis)
+library(devtools)
+library(roxygen2)
+library(pkgdown)
+```
+
+```{r}
+sessionInfo()
+```
+
