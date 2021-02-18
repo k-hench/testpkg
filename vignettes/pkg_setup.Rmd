@@ -59,6 +59,16 @@ But honestly --- there is not really a good reason for you to install this ^^
 
 ```
 
+At this point we are going to create the github instance of the repository.
+After logging in to github and creating the empty repo there (`github.com/k-hench/testpkg`), this is what I run to connect the local repository to github (in the *Terminal pane* of Rstudio) --- you can also use a GUI as gitkraken or similar for this task:
+
+```sh
+git add .
+git commit -m "init"
+git remote add origin https://github.com/k-hench/testpkg.git
+git push -u origin master
+```
+
 ### Adjusting the Package details
 
 You will need to adjust several details of you package such as the **Package Title**, **Author Name** and **Package description**.
@@ -204,4 +214,7 @@ All that you need for this, is running:
 pkgdown::build_site()
 ```
 
+This will compile your {roxygen2} documentation, the `Readme.md` file as well as all Rmarkdown scripts located in the folder `vignettes` (such as this one) into a single R package homepage that will be located in the `docs/` folder.
 
+
+After pushing the changes to GitHub and activating the right settings in the github repository settings, this can be directly hosted as GitHub pages and is accessible via [k-hench.github.io/testpkg](k-hench.github.io/testpkg) (respectively your github user name and the repository name).
